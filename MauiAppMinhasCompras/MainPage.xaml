@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.MainPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Minhas Compras"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="{StaticResource AccentColor}" />
+
+        <Entry Placeholder="Pesquisar produto..." />
+
+        <!-- Botão com nome para ser acessado no code-behind -->
+        <Button x:Name="CounterBtn" Text="Adicionar Novo Produto" Clicked="OnCounterClicked" />
+
+        <ScrollView>
+            <VerticalStackLayout>
+                <!-- Exemplo de item -->
+                <Frame>
+                    <HorizontalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="Arroz Integral" FontSize="18" FontAttributes="Bold"/>
+                            <Label Text="Quantidade: 2" TextColor="{StaticResource SecondaryTextColor}" FontSize="14"/>
+                        </VerticalStackLayout>
+                        <HorizontalStackLayout Spacing="5" HorizontalOptions="End">
+                            <ImageButton Source="Edit" />
+                            <ImageButton Source="Delete" />
+                        </HorizontalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </VerticalStackLayout>
+</ContentPage>
