@@ -17,7 +17,7 @@ namespace MauiAppMinhasCompras.Models
             get => _descricao; // Retorna o valor da descrição
             set
             {
-                // Verifica se o valor é nulo
+                //   Verifica se o valor é nulo
                 if (value == null)
                 {
                     throw new Exception("Por favor, preencha a descrição");
