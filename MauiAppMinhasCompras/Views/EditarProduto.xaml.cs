@@ -7,10 +7,9 @@ public partial class EditarProduto : ContentPage
     // Construtor da classe EditarProduto
     public EditarProduto()
     {
-        InitializeComponent(); // Inicializa os componentes da interface
+        InitializeComponent(); 
     }
 
-    // Método assíncrono que é chamado quando o item da barra de ferramentas é clicado
     private async void ToolbarItem_Clicked(object sender, EventArgs e)
     {
         try
@@ -29,15 +28,13 @@ public partial class EditarProduto : ContentPage
 
             // Atualiza o produto no banco de dados
             await App.Db.Update(p);
-            // Exibe um alerta de sucesso
             await DisplayAlert("Sucesso!", "Registro Atualizado", "OK");
             // Retorna para a página anterior na navegação
             await Navigation.PopAsync();
         }
         catch (Exception ex)
         {
-            // Em caso de erro, exibe um alerta com a mensagem de exceção
-            await DisplayAlert("Ops", ex.Message, "OK");
-        }
+           
+        } await DisplayAlert("Ops", ex.Message, "OK");
     }
 }

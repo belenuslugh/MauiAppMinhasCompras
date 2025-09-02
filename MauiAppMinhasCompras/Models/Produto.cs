@@ -1,18 +1,17 @@
-﻿using SQLite; // Importa o namespace SQLite para usar atributos e funcionalidades do SQLite
+﻿using SQLite; // Importa o namespace SQLite 
 
 namespace MauiAppMinhasCompras.Models
 {
-    // Define a classe Produto que representa um produto no banco de dados
+    
     public class Produto
     {
-        // Campo privado para armazenar a descrição do produto
+        // Campo privado para armazenar a descrição
         string _descricao;
 
         // Define a propriedade Id como chave primária e autoincremento no banco de dados
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        // Propriedade Descricao com lógica de validação no setter
         public string Descricao
         {
             get => _descricao; // Retorna o valor da descrição
@@ -21,7 +20,6 @@ namespace MauiAppMinhasCompras.Models
                 // Verifica se o valor é nulo
                 if (value == null)
                 {
-                    // Lança uma exceção se a descrição for nula
                     throw new Exception("Por favor, preencha a descrição");
                 }
 
